@@ -1,9 +1,12 @@
+/* eslint-disable no-console */
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable @typescript-eslint/no-empty-function */
 /* eslint-disable unused-imports/no-unused-vars */
 /* eslint-disable @next/next/no-css-tags */
 import Image from 'next/image';
+import Link from 'next/link';
 import * as React from 'react';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import SwiperCore, { Autoplay, EffectCoverflow, Pagination } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -14,16 +17,19 @@ import Layout from '@/components/layout/Layout';
 import Seo from '@/components/Seo';
 
 const HomePage = () => {
+  const [done, setDone] = useState(true);
   useEffect(() => {
-    alert('barakallah fii umrik mbak FITRI ku sayang,');
-    alert('aku bingung mau ngomong apa..');
-    alert('aku juga engga tau harus ngasi kado apa buat kamu');
-    alert('udah itu aja, klik ok buat lanjuttt');
-    alert(
-      'One day you will ask me which is more important. My life or yours. I will say mine and you will walk away not knowing that you are my life ~gibran'
-    );
-    window.open('https://photos.app.goo.gl/n6vkR4DvFnHbn9n17', '_newtab');
-    return () => {};
+    if (done) {
+      alert('barakallah fii umrik mbak FITRI ku sayang,');
+      alert('aku bingung mau ngomong apa..');
+      alert('aku juga engga tau harus ngasi kado apa buat kamu');
+      alert('udah itu aja, klik ok buat lanjuttt');
+      alert(
+        'One day you will ask me which is more important. My life or yours. I will say mine and you will walk away not knowing that you are my life ~gibran'
+      );
+      alert('ada sesuatu buat kamu 😘. klik lovee ❤️ nya yaahh');
+      setDone(() => false);
+    }
   }, []);
   return (
     <Layout>
@@ -32,11 +38,13 @@ const HomePage = () => {
         <div className='w-80'>
           <div className='hearts'>
             <div className='back'></div>
-            <div className='heart'></div>
+            <Link href='https://photos.app.goo.gl/n6vkR4DvFnHbn9n17'>
+              <div className='heart hover:bg-red-400 active:bg-red-500'></div>
+            </Link>
           </div>
-          {/* <SliderSweep /> */}
-          {/* <Love /> */}
         </div>
+        {/* <SliderSweep /> */}
+        {/* <Love /> */}
       </main>
     </Layout>
   );

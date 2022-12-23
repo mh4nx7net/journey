@@ -1,14 +1,13 @@
 /** @type {import('next').NextConfig} */
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  reactStrictMode: false,
   images: {
     domains: ['swiperjs.com'],
   },
   eslint: {
     dirs: ['src'],
   },
-
-  reactStrictMode: true,
   swcMinify: true,
 
   // Uncoment to add domain whitelist
