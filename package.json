@@ -18,11 +18,16 @@
     "prepare": "husky install"
   },
   "dependencies": {
+    "@ionic/react": "^6.4.1",
+    "@reacticons/ionicons": "^6.0.4",
     "clsx": "^1.2.1",
+    "daisyui": "^2.46.0",
+    "ionicons": "^6.0.4",
     "next": "^13.0.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "swiper": "^8.4.5",
     "tailwind-merge": "^1.8.0"
   },
   "devDependencies": {
